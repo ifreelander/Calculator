@@ -64,8 +64,7 @@ const Calculator = () => {
     }
 
     if (e === 'eval'){
-      //setTotal(parseInt(total))
-      
+     
       
     }
         
