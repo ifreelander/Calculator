@@ -9,24 +9,17 @@ const App= ()=> {
  
   // const AppContainer = styled.div`
   // border: 2px solid gray ;
-  // width: 900px;
-  // height: 900px;
+  // width: 1300px;
+  // height: 1500px;
   // padding: 2%;
   // margin: 100px auto;
   // `;
 
-
-
-
-  
-
   return (
     <div>
       
-        <Calculator  
+        <Calculator />
           
-        /> 
-      
     </div>
   );
 }
