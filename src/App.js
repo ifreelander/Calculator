@@ -2,26 +2,15 @@ import React, { useState } from 'react';
 import './App.css';
 import styled from 'styled-components';
 import Calculator from './components/Calculator';
-import Display from './components/Display';
-import Keypad from './components/Keypad';
+//import Display from './components/Display';
 
-const App= ()=> {
- 
-  // const AppContainer = styled.div`
-  // border: 2px solid gray ;
-  // width: 1300px;
-  // height: 1500px;
-  // padding: 2%;
-  // margin: 100px auto;
-  // `;
-
+const App = () => {
   return (
     <div>
-      
-        <Calculator />
-          
+      <h1>Simple Calculator</h1>
+      <Calculator />
     </div>
   );
-}
+};
 
 export default App;

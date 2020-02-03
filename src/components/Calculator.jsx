@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-//import Display from './Display';
-import Keypad from './Keypad';
+import Display from './Display';
 
 const Calculator = () => {
   const Calculator = styled.div`
-    border: 2px solid;
+    border: 3px solid #a52a2a;
     width: 700px;
-    height: 1000px;
+    height: 1050px;
     padding: 2%;
     margin: 20px auto;
     background-color: #fdf5e6;
@@ -15,16 +14,16 @@ const Calculator = () => {
 
   const Display = styled.div`
     font-size: 6em;
-    border: 2px #f5f5f5;
+    border: 1px;
     padding: 2px;
-    width: 560px;
+    width: 600px;
     height: 180px;
     margin: 5px auto;
-    background-color: #9acd32;
+    background-color: #faebd7;
   `;
 
   const Keypad = styled.div`
-    border: 2px solid blue;
+    border: 1px solid brown;
     padding: 1px auto;
     width: 600px;
     height: 820px;
@@ -33,7 +32,7 @@ const Calculator = () => {
 
   const Button = styled.button`
     font-size: 3em;
-    margin: 24px;
+    margin: 21px;
     width: 110px;
     height: 90px;
     padding: 20px auto;
@@ -43,8 +42,8 @@ const Calculator = () => {
 
   const BigButton = styled.button`
     font-size: 3em;
-    width: 110px;
-    height: 180px;
+    width: 100px;
+    height: 170px;
     padding: 20px auto;
     background-color: orange;
   `;
@@ -76,11 +75,6 @@ const Calculator = () => {
     setCurrentNumber('');
     setLastOperation(currentOperation);
 
-    // if (e === 'eval'){
-    //   return total
-
-    // }
-
     if (currentOperation === 'clear') {
       setCurrentNumber('');
       setTotal(0);
@@ -89,11 +83,9 @@ const Calculator = () => {
 
   const handleNumber = e => {
     setCurrentNumber(currentNumber + e);
+  };
+
   return (
-    <div><Calculator><Display></Display><Keypad>
-      
-      <Button onClick={e => {handleNumber(1)}}>1</Button>
-      <Button onClick={e => {handleNumber(2)}}>2</Button>
     <div>
       <Calculator>
         <Display>{total}</Display>

@@ -1,19 +1,18 @@
+// import React from 'react';
 // import styled from 'styled-components';
-// import React, { useState } from 'react';
 
 // const Display = () => {
-  
 //   const Display = styled.div`
-//   border: 2px solid green ;
-//   padding: 1%;
-//   width: 600px;
-//   height: 200px;
-//   margin: 10px auto;
-//   `;  
-  
+//     font-size: 6em;
+//     border: 1px;
+//     padding: 2px;
+//     width: 600px;
+//     height: 180px;
+//     margin: 5px auto;
+//     background-color: #faebd7;
+//   `;
 
-// return (<Display />)
-
-// }
+//   return <Display />;
+// };
 
 // export default Display;
