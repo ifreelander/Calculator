@@ -78,6 +78,7 @@ const Calculator = () => {
     if (currentOperation === 'clear') {
       setCurrentNumber('');
       setTotal(0);
+      setLastOperation('start')
     }
   };
 
