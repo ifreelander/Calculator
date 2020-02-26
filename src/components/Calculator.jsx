@@ -1,50 +1,40 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import Display from './Display';
 
 const Calculator = () => {
   const Calculator = styled.div`
     border: 3px solid #a52a2a;
-    width: 700px;
-    height: 1050px;
-    padding: 2%;
-    margin: 20px auto;
-    background-color: #fdf5e6;
+    background-color: darkgray;
+    padding: 10px;
+    margin: 10px;
   `;
 
   const Display = styled.div`
-    font-size: 6em;
+    font-size: 3em;
     border: 1px;
-    padding: 2px;
-    width: 600px;
-    height: 180px;
-    margin: 5px auto;
+    padding: 20px;
     background-color: #faebd7;
   `;
 
   const Keypad = styled.div`
-    border: 1px solid brown;
-    padding: 1px auto;
-    width: 600px;
-    height: 820px;
-    margin: 1px auto;
+    // display: flex;
+    // flex-direction: row;
+    padding: 5px;
+    margin: 1px;
+    background-color: darkslateblue;
   `;
 
   const Button = styled.button`
-    font-size: 3em;
-    margin: 21px;
-    width: 110px;
-    height: 90px;
-    padding: 20px auto;
+    font-size: 2em;
+    margin: 5px;
+    padding: 25px;
     border: 2px solid brown;
     background-color: #d2b48c;
   `;
 
   const BigButton = styled.button`
     font-size: 3em;
-    width: 100px;
-    height: 170px;
-    padding: 20px auto;
+    padding: 25px;
     background-color: orange;
   `;
 
@@ -78,7 +68,7 @@ const Calculator = () => {
     if (currentOperation === 'clear') {
       setCurrentNumber('');
       setTotal(0);
-      setLastOperation('start')
+      setLastOperation('start');
     }
   };
 
@@ -87,132 +77,131 @@ const Calculator = () => {
   };
 
   return (
-    <div>
-      <Calculator>
-        <Display>{total}</Display>
-        <Keypad>
-          <Button
-            onClick={e => {
-              handleNumber(7);
-            }}
-          >
-            7
-          </Button>
-          <Button
-            onClick={e => {
-              handleNumber(8);
-            }}
-          >
-            8
-          </Button>
-          <Button
-            onClick={e => {
-              handleNumber(9);
-            }}
-          >
-            9
-          </Button>
-          <Button
-            onClick={e => {
-              handleNumber(4);
-            }}
-          >
-            4
-          </Button>
-          <Button
-            onClick={e => {
-              handleNumber(5);
-            }}
-          >
-            5
-          </Button>
-          <Button
-            onClick={e => {
-              handleNumber(6);
-            }}
-          >
-            6
-          </Button>
-          <Button
-            onClick={e => {
-              handleNumber(1);
-            }}
-          >
-            1
-          </Button>
-          <Button
-            onClick={e => {
-              handleNumber(2);
-            }}
-          >
-            2
-          </Button>
-          <Button
-            onClick={e => {
-              handleNumber(3);
-            }}
-          >
-            3
-          </Button>
-          <Button
-            onClick={e => {
-              handleNumber(0);
-            }}
-          >
-            0
-          </Button>
-          <Button
-            onClick={e => {
-              handleNumber();
-            }}
-          >
-            .
-          </Button>
-          <Button
-            onClick={e => {
-              handleOperation('eval');
-            }}
-          >
-            =
-          </Button>
-          <Button
-            onClick={e => {
-              handleOperation('clear');
-            }}
-          >
-            C
-          </Button>
-          <Button
-            onClick={e => {
-              handleOperation('multiply');
-            }}
-          >
-            x
-          </Button>
-          <Button
-            onClick={e => {
-              handleOperation('minus');
-            }}
-          >
-            -
-          </Button>
-          <BigButton
-            onClick={e => {
-              handleOperation('plus');
-            }}
-          >
-            +
-          </BigButton>
-          <Button
-            onClick={e => {
-              handleOperation('divide');
-            }}
-          >
-            ÷
-          </Button>
-        </Keypad>
-      </Calculator>
-    </div>
+    <Calculator>
+      <Display>{total}</Display>
+
+      <Keypad>
+        <Button
+          onClick={e => {
+            handleNumber(7);
+          }}
+        >
+          7
+        </Button>
+        <Button
+          onClick={e => {
+            handleNumber(8);
+          }}
+        >
+          8
+        </Button>
+        <Button
+          onClick={e => {
+            handleNumber(9);
+          }}
+        >
+          9
+        </Button>
+        <Button
+          onClick={e => {
+            handleNumber(4);
+          }}
+        >
+          4
+        </Button>
+        <Button
+          onClick={e => {
+            handleNumber(5);
+          }}
+        >
+          5
+        </Button>
+        <Button
+          onClick={e => {
+            handleNumber(6);
+          }}
+        >
+          6
+        </Button>
+        <Button
+          onClick={e => {
+            handleNumber(1);
+          }}
+        >
+          1
+        </Button>
+        <Button
+          onClick={e => {
+            handleNumber(2);
+          }}
+        >
+          2
+        </Button>
+        <Button
+          onClick={e => {
+            handleNumber(3);
+          }}
+        >
+          3
+        </Button>
+        <Button
+          onClick={e => {
+            handleNumber(0);
+          }}
+        >
+          0
+        </Button>
+        <Button
+          onClick={e => {
+            handleNumber();
+          }}
+        >
+          .
+        </Button>
+        <Button
+          onClick={e => {
+            handleOperation('eval');
+          }}
+        >
+          =
+        </Button>
+        <Button
+          onClick={e => {
+            handleOperation('clear');
+          }}
+        >
+          C
+        </Button>
+        <Button
+          onClick={e => {
+            handleOperation('multiply');
+          }}
+        >
+          x
+        </Button>
+        <Button
+          onClick={e => {
+            handleOperation('minus');
+          }}
+        >
+          -
+        </Button>
+        <BigButton
+          onClick={e => {
+            handleOperation('plus');
+          }}
+        >
+          +
+        </BigButton>
+        <Button
+          onClick={e => {
+            handleOperation('divide');
+          }}
+        >
+          ÷
+        </Button>
+      </Keypad>
+    </Calculator>
   );
 };
 

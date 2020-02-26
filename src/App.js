@@ -1,15 +1,26 @@
 import React, { useState } from 'react';
-import './App.css';
 import styled from 'styled-components';
 import Calculator from './components/Calculator';
-//import Display from './components/Display';
+import './App.css';
+import Flexbox from 'flexbox-react';
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  background-color: cornflowerblue;
+`;
+
+const Header = styled.h1`
+  font-size: 32px;
+  margin: 20px;
+`;
 
 const App = () => {
   return (
-    <div>
-      <h1>Simple Calculator</h1>
+    <Container>
+      <Header>Simple Calculator</Header>
       <Calculator />
-    </div>
+    </Container>
   );
 };
 
