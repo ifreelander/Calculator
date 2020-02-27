@@ -17,8 +17,6 @@ const Calculator = () => {
   `;
 
   const Keypad = styled.div`
-    // display: flex;
-    // flex-direction: row;
     padding: 5px;
     margin: 1px;
     background-color: darkslateblue;
@@ -30,12 +28,6 @@ const Calculator = () => {
     padding: 25px;
     border: 2px solid brown;
     background-color: #d2b48c;
-  `;
-
-  const BigButton = styled.button`
-    font-size: 3em;
-    padding: 25px;
-    background-color: orange;
   `;
 
   const [currentNumber, setCurrentNumber] = useState('');
@@ -78,8 +70,7 @@ const Calculator = () => {
 
   return (
     <Calculator>
-      <Display>{total}</Display>
-
+      <Display data-testid="display">{total}</Display>
       <Keypad>
         <Button
           onClick={e => {
@@ -186,13 +177,13 @@ const Calculator = () => {
         >
           -
         </Button>
-        <BigButton
+        <Button
           onClick={e => {
             handleOperation('plus');
           }}
         >
           +
-        </BigButton>
+        </Button>
         <Button
           onClick={e => {
             handleOperation('divide');
